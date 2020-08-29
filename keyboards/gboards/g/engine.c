@@ -70,14 +70,23 @@ void processKeysUp() {
         uprintf("COMMAND Toggle\n");
 #    endif
         if (cMode != COMMAND) {  // Entering Command Mode
+#    ifndef NO_DEBUG
+        uprintf("Entering COMMAND Mode\n");
+#    endif
             CMDLEN = 0;
             pMode  = cMode;
             cMode  = COMMAND;
         } else {  // Exiting Command Mode
+#    ifndef NO_DEBUG
+        uprintf("Exiting COMMAND Mode\n");
+#    endif
             cMode = pMode;
 
             // Press all and release all
             for (int i = 0; i < CMDLEN; i++) {
+#ifndef NO_DEBUG
+    uprintf("CMDBUF: %u\n", CMDBUF[i]);
+#endif
                 register_code(CMDBUF[i]);
             }
             clear_keyboard();
