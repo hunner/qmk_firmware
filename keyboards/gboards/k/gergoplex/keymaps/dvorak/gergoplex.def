@@ -1,13 +1,18 @@
 // Gergoplex specfic combos 
 
-COMB(rlBackslash, KC_BSLS,          KC_R, KC_L)
-// TBD how to shift+slash for question
-COMB(tnQuestion,  KC_SLSH,          KC_T, KC_N)
-COMB(dhSlash,     KC_SLSH,          KC_D, KC_H)
-COMB(qjDash,      KC_MINS,          KC_Q, KC_J)
-COMB(mwUnds,      KC_UNDS,          KC_M, KC_W)
-COMB(bmQuot,      KC_QUOT,          KC_B, KC_M)
+// Left half
+COMB(commdotEsc,  KC_ESC,           KC_COMM, KC_DOT)
+COMB(qjTab,       KC_TAB,          KC_Q, KC_J)
 COMB(ixClic,      KC_BTN1,          KC_I, KC_X)
 COMB(ukClic,      KC_BTN2,          KC_U, KC_K)
 
-SUBS(pasta,       "I'd just like to interject for a moment.",       KC_H, KC_T, KC_N, KC_S)
+
+// Right half
+COMB(gcEnt,       KC_ENT,           KC_G, KC_C)
+COMB(rlBackspace, KC_BSPC,          KC_R, KC_L)
+COMB(bmQuot,      KC_QUOT,          KC_B, KC_M)
+COMB(mwUnds,      KC_UNDS,          KC_M, KC_W)
+COMB(vzSpace,     KC_SPC,           KC_V, KC_Z)
+
+
+SUBS(pasta,       "I'd just like to interject for a moment.",       KC_H, KC_J, KC_K, KC_L)
