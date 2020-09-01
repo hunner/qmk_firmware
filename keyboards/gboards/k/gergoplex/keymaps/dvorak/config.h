@@ -4,7 +4,7 @@
 // #define LEADER_TIMEOUT    1000
 #define TAPPING_TERM    200
 #undef COMBO_TERM
-#define COMBO_TERM    25
+#define COMBO_TERM    35
 
 // Both?
 #define PERMISSIVE_HOLD
