@@ -10,7 +10,7 @@ PRES(NUM|AT,                                                                    
 PRES(NUM|AP,                                                                                         KC_0)
 PRES(NUM|AA|AE,                                                                                    KC_GRV)
 PRES(NUM|AA|AP,                                                                                   KC_QUOT)
-KEYS(NUM|AA|AI,                         cmb_e9bf29584cf72c14,                  {KC_LSFT, KC_1, COMBO_END})
+PRES(NUM|AA|AI,                                                                                   KC_BSLS)
 PRES(NUM|AE|AN,                                                                                   KC_HOME)
 PRES(NUM|AN|AI,                                                                                      KC_6)
 PRES(NUM|AE|AI,                                                                                   KC_COMM)
