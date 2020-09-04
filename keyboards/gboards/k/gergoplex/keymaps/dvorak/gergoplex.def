@@ -2,7 +2,7 @@
 
 // Left half
 COMB(commdotEsc,  KC_ESC,           KC_COMM, KC_DOT)
-COMB(qjTab,       KC_TAB,          KC_Q, KC_J)
+COMB(dotpTab,     KC_TAB,           KC_DOT, KC_P)
 COMB(ixClic,      KC_BTN1,          KC_I, KC_X)
 COMB(ukClic,      KC_BTN2,          KC_U, KC_K)
 
