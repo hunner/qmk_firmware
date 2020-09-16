@@ -6,6 +6,10 @@
 #undef COMBO_TERM
 #define COMBO_TERM    50
 
+// Is this working?
+#undef DEBOUNCE
+#define DEBOUNCE    26
+
 // Both?
 #define PERMISSIVE_HOLD
 #define IGNORE_MOD_TAP_INTERRUPT
