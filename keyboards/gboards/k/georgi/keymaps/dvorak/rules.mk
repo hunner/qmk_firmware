@@ -18,7 +18,7 @@ NO_PRINT								 = no
 CONSOLE_ENABLE					 = yes
 DEBUG_MATRIX_SCAN_RATE   = no
 DEBUG_MATRIX						 = yes
-ONLY_QWERTY							 = no
+ONLY_QWERTY							 = yes
 
 #Engine options
 VPATH										+=  keyboards/gboards/
