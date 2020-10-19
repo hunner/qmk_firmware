@@ -38,6 +38,7 @@ enum specialActions {
     SPEC_REPEAT,
     SPEC_CLICK,
     SPEC_SWITCH,
+    SPEC_MOD,
 };
 struct funcEntry {
     C_SIZE chord;
@@ -77,6 +78,7 @@ uint8_t bitpop_v(C_SIZE val);
 
 // Macros for use in keymap.c
 void   SEND(uint8_t kc);
+void   START_QUICK_MOD(uint8_t kc);
 void   REPEAT(void);
 void   SET_STICKY(C_SIZE);
 void   SWITCH_LAYER(int);
@@ -90,6 +92,8 @@ C_SIZE process_engine_post(C_SIZE cur_chord, uint16_t keycode, keyrecord_t *reco
 // Keymap helpers
 // New Approach, multiple structures
 #define P_KEYMAP(chord, keycode) {chord, keycode},
+
+#define M_KEYMAP(chord, qkeycode) SEND_OSM(qkeycode);
 
 #define K_KEYMAP(chord, name, ...) {chord, (PGM_P)&name},
 #define K_ACTION(chord, name, ...) const uint8_t name[] PROGMEM = __VA_ARGS__;

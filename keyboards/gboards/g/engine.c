@@ -32,7 +32,7 @@ extern size_t                    keyLen;
 extern size_t                    comboLen;
 
 // Mode state
-enum MODE { STENO = 0, QWERTY, COMMAND };
+enum MODE { STENO = 0, QWERTY, COMMAND, QUICK_MOD };
 enum MODE pMode;
 enum MODE cMode = QWERTY;
 
@@ -251,6 +251,9 @@ C_SIZE mapKeys(C_SIZE chord, bool lookup) {
                     case SPEC_SWITCH:
                         SWITCH_LAYER(arg);
                         break;
+                    case SPEC_MOD:
+                        START_QUICK_MOD(arg);
+                        break;
                     default:
                         SEND_STRING("Invalid Special in Keymap");
                 }
@@ -401,10 +404,37 @@ void SEND(uint8_t kc) {
 #endif
         CMDBUF[CMDLEN] = kc;
         CMDLEN++;
+    } else if (cMode == QUICK_MOD && kc != MOD_LSFT && kc != MOD_LCTL && kc != MOD_LALT && kc != MOD_LGUI) {
+#     ifndef NO_DEBUG
+      uprintf("Ending QUICK_MOD Mode\n");
+#     endif
+      cMode = pMode;
+      // Press all and release all
+      for (int i = 0; i < CMDLEN; i++) {
+#ifndef NO_DEBUG
+        uprintf("CMDBUF: %u\n", CMDBUF[i]);
+#endif
+        register_code(CMDBUF[i]);
+      }
+      register_code(kc);
+      clear_keyboard();
     }
 
     if (cMode != COMMAND) register_code(kc);
     return;
+}
+void START_QUICK_MOD(uint8_t kc) {
+  if (cMode != QUICK_MOD) {
+#   ifndef NO_DEBUG
+    uprintf("Starting QUICK_MOD Mode\n");
+#   endif
+    CMDLEN = 0;
+    pMode  = cMode;
+    cMode  = QUICK_MOD;
+    CMDBUF[CMDLEN] = kc;
+    CMDLEN++;
+  }
+  return;
 }
 void REPEAT(void) {
     if (cMode != QWERTY) return;

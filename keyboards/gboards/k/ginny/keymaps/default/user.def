@@ -46,3 +46,8 @@ SUBS(AR | AT | AN,									qf3, 		"Undefined Quick Fire ")
 SUBS(AR | AN | AI,									qf4, 		"Undefined Quick Fire ")
 SUBS(AR | AI | AO,									qf5, 		"Undefined Quick Fire ")
 SUBS(AR | AO | AP,									qf6, 		"Undefined Quick Fire ")
+
+// SPEC(AL | AR | AA, SPEC_MOD, MOD_LSFT)
+SPEC(AL | AR | AS, SPEC_MOD, MOD_LCTL)
+// SPEC(AL | AR | AE, SPEC_MOD, MOD_LALT)
+// SPEC(AL | AR | AT, SPEC_MOD, MOD_LGUI)
