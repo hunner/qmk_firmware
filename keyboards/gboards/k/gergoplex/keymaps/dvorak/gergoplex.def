@@ -9,10 +9,10 @@ COMB(ukClic,      KC_BTN2,          KC_U, KC_K)
 
 // Right half
 COMB(gcEnt,       KC_ENT,           KC_G, KC_C)
-COMB(rlBackspace, KC_BSPC,          KC_R, KC_L)
-COMB(bmQuot,      KC_QUOT,          KC_B, KC_M)
+COMB(crBackspace, KC_BSPC,          KC_C, KC_R)
+COMB(bmDash,      KC_MINS,          KC_B, KC_M)
 COMB(mwUnds,      KC_UNDS,          KC_M, KC_W)
-COMB(vzSpace,     KC_SPC,           KC_V, KC_Z)
+COMB(wvSpace,     KC_SPC,           KC_W, KC_V)
 
 
 SUBS(pasta,       "I'd just like to interject for a moment.",       KC_H, KC_J, KC_K, KC_L)
