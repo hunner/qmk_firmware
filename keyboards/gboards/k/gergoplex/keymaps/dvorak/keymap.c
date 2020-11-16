@@ -94,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ## |      |      |      |Steno |      |          |      |      |      |      |      |
  * ## |      |      |      |      |      |          |      |      |      |      |      |
  * ## |------+------+------+------+------|          +------+------+------+------+------|
- * ## |      |      |Scrn  |Talon |      |          |      | Prev | Vol  | Vol  | Next |
+ * ## |      |      |Scrn  |Talon |Paste |          |      | Prev | Vol  | Vol  | Next |
  * ## |      |      |Saver |      |      |          |      |      | Down | Up   |      |
  * ## |------+------+------+------+------|          +------+------+------+------+------|
  * ## |      |      |      |      |      |          |      |      | Mute | Play |      |
@@ -108,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
   [_ADJUST] = LAYOUT_gergoplex(
       KC_NO, KC_NO, KC_NO, TO(_STENO), KC_NO,             /**/ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-      KC_NO, KC_NO, HYPR(KC_BSPACE), HYPR(KC_TAB), KC_NO, /**/ KC_NO, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT,
+      KC_NO, KC_NO, HYPR(KC_BSPACE), HYPR(KC_TAB), LSFT(KC_INS), /**/ KC_NO, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT,
       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                  /**/ KC_NO, KC_NO, KC_MUTE, KC_MPLY, KC_NO,
                                      KC_NO, KC_NO, KC_NO, /**/ KC_NO, KC_NO, RESET
       ),
