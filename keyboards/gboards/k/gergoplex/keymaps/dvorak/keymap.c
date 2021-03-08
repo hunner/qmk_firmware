@@ -25,9 +25,9 @@
  * |-----+-----+-----+-RMB-+-LMB-+      |--------------------------------|
  * |     |     |     |     |     |      |    DASH  UNDR  SPC    |        |
  * `-----+-----+-----+------+----'      `--------------------------------'
- *  .-------------------------.           .-----------------.   
- *  |        |       |        |           |     |     |     |
- *  '-------------------------'           '-----------------' 
+ *          .-----------------.           .-----------------.
+ *          |     |    |      |           |     |     |     |
+ *          '-----------------'           '-----------------'
  */
 
 // Blank template at the bottom
@@ -61,14 +61,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |   `  |  ~  |  [  |  ]  | PDN |      |  =  |     |     |     |    '   |
  * `------+-----+-----+-----+-----'      `--------------------------------'
  *          .-----------------.           .------------------.
- *          | MMB |      |    |           |     |     |  DEL |
+ *          |     |      |    |           |     |     |      |
  *          '-----------------'           '------------------'
  */
 [_SYMB] = LAYOUT_gergoplex(
     KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_BSLS, KC_PIPE,
     KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, KC_PGUP,   KC_PLUS, KC_MINS, KC_SLSH, KC_ASTR, KC_MINS,
     KC_GRV , KC_TILD, KC_LBRC, KC_RBRC, KC_PGDN,   KC_EQL , KC_TRNS, KC_TRNS, KC_TRNS, KC_QUOT,
-                      CMB_TOG, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_DEL
+                      KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS
     ),
 /* Keymap 2: Pad/Function layer
  * ,-----------------------------.       ,-------------------------------.
@@ -102,7 +102,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ## `------+------+------+------+------'          `------+------+------+------+------'
  * ##
  * ##               ,------+------+------.          ,------+------+------.
- * ##               |      |      |      |          |      |      |Reset |
  * ##               |      |      |      |          |      |      |      |
  * ##               `------+------+------'          `------+------+------'
  */
